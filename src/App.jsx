@@ -49,8 +49,10 @@ function App() {
   );
 
   return (
-    <div className="">
-      <h1>Movie Collection</h1>
+    <div className="w-full bg-gray-800 text-white">
+      <h1 className="w-full mx-auto text-3xl py-4 bg-gray-900 text-center font-bold">
+        Movie Collection
+      </h1>
 
       <Filter
         titleFilter={titleFilter}
@@ -59,9 +61,11 @@ function App() {
         setRateFilter={setRateFilter}
       />
 
-      <div className="add-movie">
-        <h2>Add New Movie</h2>
-        <form onSubmit={handleAddMovie}>
+      <MovieList movies={filteredMovies} />
+
+      <div className="my-4 py-4 px-5">
+        <h2 className="font-bold text-2xl text-center">Add New Movie</h2>
+        <form onSubmit={handleAddMovie} className="flex flex-col gap-2 p-4">
           <input
             type="text"
             placeholder="Title"
@@ -70,6 +74,7 @@ function App() {
               setNewMovie({ ...newMovie, title: e.target.value })
             }
             required
+            className="w-full p-4 outline rounded-md"
           />
           <textarea
             placeholder="Description"
@@ -78,6 +83,7 @@ function App() {
               setNewMovie({ ...newMovie, description: e.target.value })
             }
             required
+            className="w-full p-4 outline rounded-md"
           />
           <input
             type="url"
@@ -87,6 +93,7 @@ function App() {
               setNewMovie({ ...newMovie, posterURL: e.target.value })
             }
             required
+            className="w-full p-4 outline rounded-md"
           />
           <input
             type="number"
@@ -99,12 +106,16 @@ function App() {
               setNewMovie({ ...newMovie, rating: parseFloat(e.target.value) })
             }
             required
+            className="w-full p-4 outline rounded-md"
           />
-          <button type="submit">Add Movie</button>
+          <button
+            type="submit"
+            className="bg-gray-100 p-4 text-gray-900 font-bold rounded-md"
+          >
+            Add Movie
+          </button>
         </form>
       </div>
-
-      <MovieList movies={filteredMovies} />
     </div>
   );
 }
