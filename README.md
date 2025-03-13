@@ -14,19 +14,19 @@ To run this project on your local machine, follow these steps:
 
 1. **Clone the repository:**
 
-   ```cmd
+   ```sh
    git clone https://github.com/enkiga/movie_listing
    cd movie_listing
    ```
 
 2. **Install dependencies:**
 
-   ```cmd
+   ```sh
    npm install
    ```
 
 3. **Run the development server:**
 
-   ```cmd
+   ```sh
    npm run dev
    ```
