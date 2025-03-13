@@ -15,7 +15,7 @@ To run this project on your local machine, follow these steps:
 1. **Clone the repository:**
 
    ```cmd
-   git clone https://github.com/your-username/movie_listing.git
+   git clone https://github.com/enkiga/movie_listing
    cd movie_listing
    ```
 
